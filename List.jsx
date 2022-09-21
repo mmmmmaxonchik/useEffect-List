@@ -25,8 +25,8 @@ class List extends React.Component {
 
   render() {
     return (
-      <div className="List">
-        <div className="click">
+      <div>
+        <div>
           <button onClick={this.addNumber}>New number</button>
         </div>
         {this.state.number.map((num) => (

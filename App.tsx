@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './style.css';
 import List from './List.jsx';
+import List2 from './List2.jsx';
 
 export default function App() {
   const [list, setList] = React.useState(false);
@@ -14,9 +15,16 @@ export default function App() {
   };
   return (
     <div>
-      {list && <List />}
-      <button onClick={deleteList}>Delete List</button>
-      <button onClick={createList}>Craete List</button>
+      <div className="List1">
+        {/* {list && <List />} */}
+        {list && <List2 />}
+        <button onClick={deleteList} id="buttonDelete">
+          Delete List
+        </button>
+        <button onClick={createList} id="buttonCreate">
+          Craete List
+        </button>
+      </div>
     </div>
   );
 }
